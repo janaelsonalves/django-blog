@@ -1,0 +1,21 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}" />
+
+<body>
+  <header class="app-header">
+    <h1>My First Blog in Django</h1>
+  </header>
+
+  <main class="container">
+    <h2>{{ post }}</h2>
+    <p>
+      <span style="font-weight: bold">Author: </span>
+      {{ post.author.name }}<br />
+      <!-- <span>Created at: </span>{{ post.created_at }}<br /> -->
+      <span style="font-weight: bold">Published at: </span>
+      {{ post.published_at }}<br />
+    </p>
+    <p class="text-justified">{{ post.text }}</p>
+  </main>
+</body>
